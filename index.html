@@ -65,13 +65,40 @@
         .logo-container {
             display: flex;
             align-items: center;
+            gap: 12px;
             text-decoration: none;
         }
 
-        .logo-img {
-            max-height: 75px;
-            width: auto;
-            object-fit: contain;
+        .logo-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #FAF5F3 0%, #EEDFD8 100%);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .logo-text-wrapper h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            line-height: 1;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .logo-text-wrapper span {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            display: block;
         }
 
         nav ul {
@@ -194,6 +221,8 @@
 
         .hero-img-card img {
             width: 100%;
+            height: 380px;
+            object-fit: cover;
             border-radius: 16px;
             display: block;
         }
@@ -413,9 +442,10 @@
         }
 
         .footer-logo {
-            max-height: 80px;
-            margin-bottom: 15px;
-            filter: brightness(0) invert(1);
+            font-size: 2.2rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: #FAF5F3;
+            margin-bottom: 5px;
         }
 
         .social-links {
@@ -471,10 +501,14 @@
         ✨ FREE GEL GLUE & PREP KIT WITH EVERY ORDER • PAKISTAN WIDE DELIVERY ✨
     </div>
 
-    <!-- Header Navigation with Embedded Logo -->
+    <!-- Header Navigation -->
     <header>
         <a href="#" class="logo-container">
-            <img src="https://i.ibb.co/LzdSdt2/neeshi-art-logo.jpg" alt="Neeshi Art Logo" class="logo-img">
+            <div class="logo-badge">N</div>
+            <div class="logo-text-wrapper">
+                <h1>Neeshi Art</h1>
+                <span>Handcrafted Luxury</span>
+            </div>
         </a>
         <nav>
             <ul>
@@ -498,7 +532,7 @@
         </div>
         <div class="hero-image-wrapper">
             <div class="hero-img-card">
-                <img src="1001159304.jpg" alt="Neeshi Art Luxury Nails">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" alt="Neeshi Art Luxury Press On Nails">
             </div>
         </div>
     </section>
@@ -537,7 +571,7 @@
         <div class="gallery-grid">
             <div class="gallery-card">
                 <div class="gallery-img-box">
-                    <img src="1001159312.jpg" alt="Unique Nail Styles Collection">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727fec88a8d?q=80&w=800&auto=format&fit=crop" alt="Luxury Embossed & Gold Art">
                 </div>
                 <div class="gallery-info">
                     <h4>Luxury Embossed & Gold Art</h4>
@@ -548,7 +582,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-img-box">
-                    <img src="1001159311.jpg" alt="50 Unique Styles">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=800&auto=format&fit=crop" alt="50 Unique Aesthetic Styles">
                 </div>
                 <div class="gallery-info">
                     <h4>50 Unique Aesthetic Styles</h4>
@@ -559,7 +593,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-img-box">
-                    <img src="1001159310.jpg" alt="Top 10 Known Nail Art Models">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="Top Known Models">
                 </div>
                 <div class="gallery-info">
                     <h4>Top Known Models</h4>
@@ -570,7 +604,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-img-box">
-                    <img src="1001159308.jpg" alt="Trending Nail Colors 2026">
+                    <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=800&auto=format&fit=crop" alt="2026 Trending Shades">
                 </div>
                 <div class="gallery-info">
                     <h4>2026 Trending Shades</h4>
@@ -667,7 +701,6 @@
             msg += `*Shape & Length:* ${shape}\n`;
             msg += `*Design Reference:* ${style}\n`;
 
-            // Apna WhatsApp number country code ke sath set karein
             const whatsappNum = "923000000000";
             const url = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(msg)}`;
             
